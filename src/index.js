@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import { VideoProvider,VideoContext } from './contexts/videoContext';
 
+export {VideoContext};
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-    <App />
+      <VideoProvider>
+      <App />
+      </VideoProvider>
+    
     </Router>
   </React.StrictMode>
 );

@@ -41,3 +41,14 @@
 .nav-link{
   padding: 1rem;
 }
+
+.video-list{
+  list-style-type: none;
+  display: flex;
+}
+
+.video-list .video-card{
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid black;
+}
