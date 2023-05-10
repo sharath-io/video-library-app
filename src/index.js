@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import { VideoProvider,VideoContext } from './contexts/videoContext';
+import { LikeProvider,LikeContext } from './contexts/likeContext';
 
-export {VideoContext};
+export {VideoContext,LikeContext};
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <VideoProvider>
-      <App />
+        <LikeProvider>
+        <App />
+        </LikeProvider>
+      
       </VideoProvider>
     
     </Router>
