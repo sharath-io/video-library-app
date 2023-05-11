@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-import {Home,LikedVideos,WatchLater,Videos} from './pages';
+import {Home,LikedVideos,WatchLater,Videos,Video} from './pages';
 import {Header} from './components/Header';
 import './App.css';
 
@@ -12,6 +12,8 @@ function App() {
         <Route path="/videos" element={<Videos/>}/>
         <Route path="/watchlater" element={<WatchLater/>}/>
         <Route path="/likedVideos" element={<LikedVideos/>}/>
+        <Route path="/video/:videoId" element={<Video/>}/>
+        
       </Routes>
     
     </div>
