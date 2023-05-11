@@ -4,19 +4,20 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import { VideoProvider,VideoContext } from './contexts/videoContext';
 import { LikeProvider,LikeContext } from './contexts/likeContext';
+import { WatchlaterProvider,WatchlaterContext } from './contexts/watchlaterContext';
 
-export {VideoContext,LikeContext};
+export {VideoContext,LikeContext,WatchlaterContext};
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <VideoProvider>
         <LikeProvider>
-        <App />
+          <WatchlaterProvider>
+          <App />
+          </WatchlaterProvider>
         </LikeProvider>
-      
       </VideoProvider>
-    
     </Router>
   </React.StrictMode>
 );

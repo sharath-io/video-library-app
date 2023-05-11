@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import { LikeContext } from "../contexts/likeContext"
 
 export function LikedVideos(){
